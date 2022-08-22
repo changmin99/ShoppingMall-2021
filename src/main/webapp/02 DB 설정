@@ -43,3 +43,8 @@ insert into member_tbl_02 values(member_seq.nextval, '장믿음', '010-1111-4444
 insert into member_tbl_02 values(member_seq.nextval, '최사랑', '010-1111-5555', '울릉군 울릉읍 독도2리', '20151113', 'A', '30');
 insert into member_tbl_02 values(member_seq.nextval, '진평화', '010-1111-6666', '제주도 제주시 외나무골', '20151225', 'B', '60');
 insert into member_tbl_02 values(member_seq.nextval, '차공단', '010-1111-7777', '제주도 제주시 감나무골', '20151211', 'C', '60');
+
+commit;
+
+-- 반드시 commit 할 것 !
+
