@@ -52,9 +52,9 @@
 <nav>
 	<ul>
 		<li><a href="/memberjoinform.jsp">회원등록</a></li>
-		<li><a href="/voteMember.do">회원목록 조회/수정</a></li>
-		<li><a href="/voteList.do">회원매출조회</a></li>
-		<li><a href="/voteResult.do">홈으로</a></li>	
+		<li><a href="/memberinfo.jsp">회원목록 조회/수정</a></li>
+		<li><a href="-">회원매출조회</a></li>
+		<li><a href="-">홈으로</a></li>	
 	</ul>
 </nav>
 <section align=left>
