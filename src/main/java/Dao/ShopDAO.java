@@ -7,6 +7,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import Dto.MemberDTO;
+
 public class ShopDAO {
 	
 	Connection conn;
@@ -48,8 +50,36 @@ public class ShopDAO {
 			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
 		}
 		
-		return result;
+		return result;	
+	}
+	
+	
+	public boolean MemberJoin(MemberDTO dto)
+	{
+	
+		boolean flag = false;
+		try {
+			pstmt = conn.prepareStatement("insert into member_tbl_02 values(?,?,?,?,?,?,?)");
+			pstmt.setString(1, dto.getCustno());
+			pstmt.setString(2, dto.getCustname());
+			pstmt.setString(3, dto.getPhone());
+			pstmt.setString(4, dto.getAddress());
+			pstmt.setString(5, dto.getJoindate());
+			pstmt.setString(6, dto.getGrade());
+			pstmt.setString(7, dto.getCity());
+			int result = pstmt.executeUpdate();
+			if(result>0)
+				flag=true;
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
+		}
+		return flag;
 		
 	}
+	
+	
 
 }

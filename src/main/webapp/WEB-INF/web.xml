@@ -11,16 +11,5 @@
   </welcome-file-list>
 
 
-  	<display-name>HRD1</display-name>
-	<servlet>
-		<servlet-name>FrontController</servlet-name>
-		<servlet-class>Controller.FrontController</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>FrontController</servlet-name>
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
-
 
 </web-app>

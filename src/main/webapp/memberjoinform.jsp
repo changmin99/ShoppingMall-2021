@@ -10,6 +10,9 @@
 <!-- custno 받기 -->
 <%@page import="Dao.*,Dto.*" %>
 <%
+		request.setCharacterEncoding("UTF-8"); //요청 관련 인코딩 처리
+		response.setContentType("text/html;charset=utf-8"); //응답 관련 인코딩 처리
+
 		ShopDAO dao = ShopDAO.getInstance();
 		int custno = dao.getMaxcustNo();
 		custno +=1;
