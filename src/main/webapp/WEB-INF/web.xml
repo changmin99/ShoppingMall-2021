@@ -13,7 +13,7 @@
 
   	<display-name>HRD1</display-name>
 	<servlet>
-		<servlet-name>VoteController</servlet-name>
+		<servlet-name>FrontController</servlet-name>
 		<servlet-class>Controller.FrontController</servlet-class>
 	</servlet>
 	

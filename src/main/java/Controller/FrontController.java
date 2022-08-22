@@ -16,11 +16,11 @@ public class FrontController extends HttpServlet{
 	public void init() throws ServletException {
 		map = new HashMap();
 		
-		map.put("/main.do", null);
-		map.put("/memberList.do", null);
-		map.put("/voteMember.do", null);
-		map.put("/voteList.do", null);
-		map.put("/voteResult.do", null);
+		map.put("/-.do", null);
+		map.put("/-.do", null);
+		map.put("/-.do", null);
+		map.put("/-.do", null);
+		map.put("/-.do", null);
 	}
 
 	@Override
