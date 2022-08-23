@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Dto.MemberDTO;
+import Dto.SalesDTO;
 
 public class ShopDAO {
 	
@@ -113,4 +114,40 @@ public class ShopDAO {
 		
 	}
 
+	public List<SalesDTO> getSaleslist(){
+		ArrayList list = new ArrayList();
+		SalesDTO dto = null;
+		try {
+			String sql = "select mem.custno,custname,grade,sum(price) as prc"
+					+ " from member_tbl_02 mem"
+					+ " inner join money_tbl_02 money"
+					+ " on mem.custno=money.custno"
+					+ " group by mem.custno,custname,grade"
+					+ " order by sum(price) desc";
+					
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if(rs!=null)
+			{
+				while(rs.next())
+				{
+					dto = new SalesDTO();
+					dto.setCustno(rs.getString("custno"));
+					dto.setCustname(rs.getString("custname"));
+					dto.setGrade(rs.getString("grade"));
+					dto.setSales(rs.getString("prc"));
+					list.add(dto);
+				}	
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try { rs.close(); }catch(Exception e) {e.printStackTrace();}
+			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
+		}
+		return list;
+	}
+	
+	
+	
 }

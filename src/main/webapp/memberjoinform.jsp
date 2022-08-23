@@ -67,11 +67,11 @@
 	<ul>
 		<li><a href="/memberjoinform.jsp">회원등록</a></li>
 		<li><a href="/memberinfo.jsp">회원목록 조회/수정</a></li>
-		<li><a href="-">회원매출조회</a></li>
-		<li><a href="-">홈으로</a></li>	
+		<li><a href="/saleslist.jsp">회원매출조회</a></li>
+		<li><a href="/index.jsp">홈으로</a></li>	
 	</ul>
 </nav>
-<section align=left>
+<section align=center>
 		
 		<form action="/proc/memberjoinproc.jsp" method="post" name="joinform" onsubmit="return false">
 			<table border="1" align=center>
